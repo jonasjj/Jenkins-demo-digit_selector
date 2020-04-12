@@ -5,6 +5,8 @@ use ieee.numeric_std.all;
 library pck_lib;
 use pck_lib.sim.all;
 
+library digit_selector_lib;
+
 entity digit_selector_tb is
 end digit_selector_tb; 
 
@@ -20,7 +22,7 @@ begin
 
   clk <= not clk after sim_clk_period / 2;
 
-  DUT : entity seg7.digit_selector(rtl)
+  DUT : entity digit_selector_lib.digit_selector(rtl)
   generic map (
     cnt_bits => cnt_bits
   )
