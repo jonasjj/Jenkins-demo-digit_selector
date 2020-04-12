@@ -24,7 +24,7 @@ architecture rtl of digit_selector is
 
 begin
 
-  digit_sel <= clk_cnt(clk_cnt'high);
+  digit_sel <= '0';
 
   COUNT_PROC : process(clk)
   begin
